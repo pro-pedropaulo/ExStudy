@@ -1,8 +1,8 @@
 package com.app.ExStudy.Controllers;
 
 import com.app.ExStudy.DTOS.UserDTO;
-import com.app.ExStudy.Model.User;
 import com.app.ExStudy.Services.UserService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,26 +16,33 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers() {
-        return ResponseEntity.ok(userService.getAllUsers());
+    public ResponseEntity<List<UserDTO>> getAllUsers() {
+        List<UserDTO> users = userService.getAllUsers();
+        return ResponseEntity.ok(users);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) {
-        return userService.getUserById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
+        UserDTO userDTO = userService.getUserById(id);
+        if (userDTO != null) {
+            return ResponseEntity.ok(userDTO);
+        }
+        return ResponseEntity.notFound().build();
     }
 
     @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody UserDTO userDTO) {
-        return ResponseEntity.ok(userService.createUser(userDTO));
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
+        UserDTO createdUser = modelMapper.map(userService.createUser(userDTO), UserDTO.class);
+        return ResponseEntity.ok(createdUser);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody UserDTO userDTO) {
-        User updatedUser = userService.updateUser(id, userDTO);
+    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody UserDTO userDTO) {
+        UserDTO updatedUser = modelMapper.map(userService.updateUser(id, userDTO), UserDTO.class);
         if (updatedUser != null) {
             return ResponseEntity.ok(updatedUser);
         }

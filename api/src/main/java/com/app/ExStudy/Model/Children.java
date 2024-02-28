@@ -33,7 +33,12 @@ public class Children {
     @NotNull
     private char sex_child;
 
+    @ManyToOne
+    @JoinColumn(name = "classroom_id")
+    private Classroom classroom;
+
     @ManyToMany(mappedBy = "children")
     private Set<Allergy> allergies;
+
 
 }
