@@ -15,5 +15,5 @@ public class AdminDTO {
     private String password;
     private String role;
     private AddressDTO address;
-
+    private Long idAddress;
 }

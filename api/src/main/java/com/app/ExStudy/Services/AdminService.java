@@ -1,7 +1,9 @@
 package com.app.ExStudy.Services;
 
 import com.app.ExStudy.DTOS.AdminDTO;
+import com.app.ExStudy.Model.Address;
 import com.app.ExStudy.Model.Admin;
+import com.app.ExStudy.Repositories.AddressRepository;
 import com.app.ExStudy.Repositories.AdminRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +22,15 @@ public class AdminService {
     @Autowired
     private ModelMapper modelMapper;
 
+    @Autowired
+    private AddressRepository addressRepository;
+
     public Admin createUser(AdminDTO adminDTO) {
         Admin admin = modelMapper.map(adminDTO, Admin.class);
+        if(adminDTO.getIdAddress() != null) {
+            Address address = addressRepository.findById(adminDTO.getIdAddress()).orElse(null);
+            admin.setAddress(address);
+        }
         return adminRepository.save(admin);
     }
 
@@ -29,11 +38,22 @@ public class AdminService {
         Optional<Admin> userData = adminRepository.findById(id);
         if (userData.isPresent()) {
             Admin admin = userData.get();
-            adminDTO.setId(admin.getIdAdmin());
-            modelMapper.map(adminDTO, admin);
+
+            admin.setName(adminDTO.getName());
+            admin.setEmployeeCode(adminDTO.getEmployeeCode());
+            admin.setPassword(adminDTO.getPassword());
+            admin.setRole(adminDTO.getRole());
+
+            if (adminDTO.getIdAddress() != null) {
+                Address address = addressRepository.findById(adminDTO.getIdAddress()).orElseThrow(()
+                        -> new RuntimeException("Address not found"));
+                admin.setAddress(address);
+            }
+
             return adminRepository.save(admin);
+        } else {
+            throw new RuntimeException("admin not found");
         }
-        return null;
     }
 
     public void deleteUser(Long id) {
