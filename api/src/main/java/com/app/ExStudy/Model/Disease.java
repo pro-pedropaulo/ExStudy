@@ -8,24 +8,19 @@ import org.antlr.v4.runtime.misc.NotNull;
 import java.util.Set;
 
 @Entity
-@Table(name = "tb_disabilities")
+@Table(name = "tb_disease")
 @Getter
 @Setter
-public class Disability {
+public class Disease {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idDisease;
 
     @Column(name = "description")
     @NotNull
     private String description;
 
-    @ManyToMany
-    @JoinTable(
-            name = "child_disability",
-            joinColumns = @JoinColumn(name = "child_id"),
-            inverseJoinColumns = @JoinColumn(name = "disability_id")
-    )
-    private Set<Children> children;
+    @ManyToMany(mappedBy = "diseases")
+    private Set<Child> children;
 }
 

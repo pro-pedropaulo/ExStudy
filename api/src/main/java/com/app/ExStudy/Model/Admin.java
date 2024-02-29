@@ -6,13 +6,13 @@ import lombok.Setter;
 import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
-@Table(name = "tb_users")
+@Table(name = "tb_admin")
 @Getter
 @Setter
-public class User {
+public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idAdmin;
 
     @Column(name = "name")
     @NotNull
@@ -29,5 +29,9 @@ public class User {
     @Column(name = "role")
     @NotNull
     private String role;
+
+    @OneToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
 
 }

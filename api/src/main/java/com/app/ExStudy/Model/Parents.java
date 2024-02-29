@@ -15,17 +15,37 @@ import java.util.List;
 public class Parents {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idParent;
 
-    @Column(name = "name")
+    @Column(name = "name_woman_responsible")
     @NotNull
-    private String name;
+    private String nameWomanResponsible;
 
-    @Column(name = "document")
+    @Column(name = "name_man_responsible")
+    private String nameManResponsible;
+
+    @Column(name = "phone_woman_responsible")
     @NotNull
-    private String document;
+    private String phoneWomanResponsible;
 
-//    // Relação com Children (muitos para um)
-//    @OneToMany(mappedBy = "parent")
-//    private List<Children> children;
+    @Column(name = "phone_man_responsible")
+    private String phoneManResponsible;
+
+    @Column(name = "document_woman_responsible")
+    @NotNull
+    private String documentWomanResponsible;
+
+    @Column(name = "document_man_responsible")
+    private String documentManResponsible;
+
+    @Column(name = "observation")
+    private String observation;
+
+    @OneToMany(mappedBy = "parents")
+    private List<Child> child;//     um responsavel pode ter mais de um filho
+
+    // um responsavel pode ter mais de um endereco
+    @OneToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
 }

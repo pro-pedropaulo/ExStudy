@@ -13,18 +13,15 @@ import java.util.Set;
 @Setter
 public class Allergy {
     @Id
+    @Column(name = "id_allergy")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idAllergy;
 
     @Column(name = "description")
     @NotNull
     private String description;
 
-    @ManyToMany
-    @JoinTable(
-            name = "child_allergy",
-            joinColumns = @JoinColumn(name = "child_id"),
-            inverseJoinColumns = @JoinColumn(name = "allergy_id")
-    )
-    private Set<Children> children;
+    @ManyToMany(mappedBy = "allergies")
+    private Set<Child> children;
+
 }

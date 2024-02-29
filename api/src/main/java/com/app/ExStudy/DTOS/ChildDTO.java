@@ -8,13 +8,15 @@ import java.util.Set;
 
 @Getter
 @Setter
-public class ChildrenDTO {
-    private Long id;
+public class ChildDTO {
+    private Long idChild;
     private String name;
     private LocalDate dateOfBirth;
     private String document;
     private char sexChild;
-    private Long parentId; // Referência ao pai/mãe
-    private Set<Long> disabilityIds; // Referências às deficiências
-    private Set<Long> allergyIds; // Referências às alergias
+    private ClassroomDTO classroom;
+    private ParentsDTO parents;
+    private Set<AllergyDTO> allergies;
+    private Set<DiseaseDTO> diseases;
+    private Set<MonitorsDTO> monitors;
 }

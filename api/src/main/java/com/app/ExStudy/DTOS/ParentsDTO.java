@@ -8,8 +8,13 @@ import java.util.List;
 @Setter
 @Getter
 public class ParentsDTO {
-    private Long id;
-    private String name;
-    private String document;
-    private List<Long> childrenIds;
+    private Long idParent;
+    private String nameWomanResponsible;
+    private String nameManResponsible;
+    private String phoneWomanResponsible;
+    private String phoneManResponsible;
+    private String documentWomanResponsible;
+    private String documentManResponsible;
+    private String observation;
+    private AddressDTO address;
 }

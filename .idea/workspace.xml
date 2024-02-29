@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b6479e34-43cc-4371-9f1d-2d36c0bafb46" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/api/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/api/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/DTOS/ClassroomDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/DTOS/ClassroomDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/DTOS/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/DTOS/AdminDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Allergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Allergy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Children.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Disability.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Disease.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Parents.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Parents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Repositories/ClassroomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Repositories/ClassroomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Repositories/AdminRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Services/ClassroomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Services/ClassroomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/app/ExStudy/Services/AdminService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2cyn23HDiiPsr0ZKQJUbTEoArHC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ExStudyApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-pedrop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ExStudy/ExStudy&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ExStudyApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6479e34-43cc-4371-9f1d-2d36c0bafb46" name="Changes" comment="" />
+      <created>1709092476359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709092476359</updated>
+    </task>
+    <servers />
+  </component>
+</project>

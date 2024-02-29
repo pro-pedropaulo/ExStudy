@@ -15,20 +15,21 @@ import java.util.Set;
 public class Classroom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idClassroom;
 
     @Column(name = "type")
     @NotNull
     private String type;
 
-    @Column(name = "nomenclature")
-    private String nomenclature;
+    @Column(name = "namecloture")
+    private String nameCloture;
 
-    @Column(name = "student_count")
-    private int studentCount;
+    @Column(name = "count_children")
+    private int countChildren;
 
+//     uma sala de aula pode ter muitas crianças
     @OneToMany(mappedBy = "classroom")
-    private Set<Children> children;
+    private Set<Child> child;
 
 
 }
